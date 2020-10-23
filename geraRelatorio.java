@@ -28,10 +28,15 @@ public class geraRelatorio {
             apto = entrega.getApDestino()+"";
             oprdr = entrega.getOperador();
             rtr = "Não retirado";
+            int cont = 0;
             for (Morador morador : cdm.getMoradores()) {
                 if(entrega.getApDestino() == morador.getNumeroApartamento()) {
                     mrdr = morador.getNome();
+                    cont++;
                 }
+            }
+            if(cont == 0) {
+                mrdr = "NULL";
             }
             System.out.format("%5s %15s %30s %5s %8s %15s %15s", ent, dthr, dscr, apto, oprdr, rtr, mrdr);    
             System.out.println();

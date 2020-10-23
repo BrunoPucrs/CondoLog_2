@@ -6,7 +6,7 @@ public class OperacaoDeEntregas {
 
     public void registrarEntregas() {
         //formato: descrição, dia, mes, ano, hora, minuto, apartamento, operador
-        entregas.add(new Entrega(1,"Caixa grande branca", 12, 10, 2020, 18, 33, 405, "BG"));
+        entregas.add(new Entrega(1,"Caixa grande branca", 12, 10, 2020, 18, 33, 701, "BG"));
         entregas.add(new Entrega(2,"Caixa pequena azul", 13, 10, 2020, 19, 41, 406, "GP"));
         entregas.add(new Entrega(3,"Envelope pardo", 13, 10, 2020, 19, 56, 302, "BR"));
         entregas.add(new Entrega(4,"Carta internacional", 19, 11, 2020, 13, 44, 306, "BG"));
