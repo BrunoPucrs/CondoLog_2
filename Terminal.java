@@ -43,6 +43,15 @@ public class Terminal {
 
                 case 3:
                 //REGISTRAR NOVA ENTREGA
+                int maiorN = 0;
+                if(entrega.getEntregas().size() != 0) {
+                    for(Entrega e : entrega.getEntregas()) {
+                        if(maiorN < e.getNro()) {
+                            maiorN = e.getNro();
+                        }
+                    }
+                }
+                nro = maiorN;
                 nro++;
 
                 System.out.println("Novo registro de entrega: ");
@@ -133,7 +142,7 @@ public class Terminal {
                 
                 case 5:
                 geraRelatorio rel = new geraRelatorio(cadastro_morador, entrega);
-                System.out.println(rel);
+                rel.relatorio();
                 break;
 
                 case 0:
