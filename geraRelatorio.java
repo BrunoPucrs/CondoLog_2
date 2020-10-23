@@ -1,4 +1,4 @@
-package CondoLog;
+package CondoLog2;
 
 public class geraRelatorio {
     private CadastroDeMoradores cdm;
