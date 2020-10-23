@@ -27,9 +27,9 @@ public class Terminal {
 
                 case 2:
                 //CADASTRO NOVO MORADOR
-                System.out.println("Cadatro de novo Morador");
+                System.out.println("Cadastro de novo Morador");
                 System.out.println("Informe o nome do novo morador: ");
-                String nome=in.next();
+                String nome=in2.nextLine();
                 System.out.println("Informe o CPF do morador: ");
                 String cpf=in.next();
                 System.out.println("Informe o apartamento do morador: ");
