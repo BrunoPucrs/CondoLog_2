@@ -25,7 +25,7 @@ public class TesteClasses {
         op.buscarEntregaData(12, 10, 2020, 13, 10, 2020);
 
         //teste da classe geraRelatorio que gera o relatorio
-        geraRelatorio gr = new geraRelatorio(cadastro, op);
-        gr.relatorio();
+        //geraRelatorio gr = new geraRelatorio(cadastro, op);
+        //gr.relatorio();
     }
 }
