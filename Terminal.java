@@ -14,7 +14,7 @@ public class Terminal {
         boolean continuar=true;
         while(continuar){
             System.out.println("ESCOLHA UMA DAS OPÇÕES ABAIXO");
-            System.out.println("[1] LISTAR MORADORES\n[2] CADASTRAR MORADOR\n[3] REGISTAR NOVA ENTREGA\n[4] PROCURAR ENTREGA\n[5] MOSTRAR TODAS ENTREGAS\n[0] SAIR");
+            System.out.println("[1] LISTAR MORADORES\n[2] CADASTRAR MORADOR\n[3] REGISTAR NOVA ENTREGA\n[4] PROCURAR ENTREGA\n[5] MOSTRAR TODAS ENTREGAS\n[6] RETIRAR UMA ENTREGA\n[0] SAIR");
             int opcao=in.nextInt();
             
             switch(opcao){
@@ -143,6 +143,13 @@ public class Terminal {
                 case 5:
                 geraRelatorio rel = new geraRelatorio(cadastro_morador, entrega);
                 rel.relatorio();
+                break;
+
+                case 6:
+                int num = 0;
+                System.out.println("\nDigite o numero da entrega: ");
+                num = in.nextInt();
+                entrega.retirarEntregaNro(num);
                 break;
 
                 case 0:

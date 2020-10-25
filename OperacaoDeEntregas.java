@@ -58,6 +58,19 @@ public class OperacaoDeEntregas {
         }
     }
 
+    public void retirarEntregaNro(int num) {
+        boolean flag = false;
+        for(Entrega entrega : entregas) {
+            if(entrega.getNro() == num) {
+                flag = true;
+                entrega.setRetirado(true);
+            }
+        }
+        if(flag == false) {
+            System.out.println("Não foram encontradas entregas com essa descrição!");
+        }
+    }
+
     public ArrayList<Entrega> getEntregas() {
         return entregas;
     }
