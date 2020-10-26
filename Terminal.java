@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Terminal {
     public static void main(String[] args) {
+
         Scanner in3 = new Scanner(System.in);
         Scanner in2 = new Scanner(System.in);
         Scanner in = new Scanner(System.in);
@@ -11,10 +12,13 @@ public class Terminal {
 
         int nro = 0;
 
+
         boolean continuar=true;
         while(continuar){
             System.out.println("ESCOLHA UMA DAS OPÇÕES ABAIXO");
+
             System.out.println("[1] LISTAR MORADORES\n[2] CADASTRAR MORADOR\n[3] REGISTAR NOVA ENTREGA\n[4] PROCURAR ENTREGA\n[5] MOSTRAR TODAS ENTREGAS\n[6] RETIRAR UMA ENTREGA\n[0] SAIR");
+
             int opcao=in.nextInt();
             
             switch(opcao){
@@ -27,9 +31,11 @@ public class Terminal {
 
                 case 2:
                 //CADASTRO NOVO MORADOR
+
                 System.out.println("Cadastro de novo Morador");
                 System.out.println("Informe o nome do novo morador: ");
                 String nome=in2.nextLine();
+
                 System.out.println("Informe o CPF do morador: ");
                 String cpf=in.next();
                 System.out.println("Informe o apartamento do morador: ");
@@ -43,6 +49,7 @@ public class Terminal {
 
                 case 3:
                 //REGISTRAR NOVA ENTREGA
+
                 int maiorN = 0;
                 if(entrega.getEntregas().size() != 0) {
                     for(Entrega e : entrega.getEntregas()) {
@@ -57,6 +64,8 @@ public class Terminal {
                 System.out.println("Novo registro de entrega: ");
                 System.out.println("Descreva o produto que foi entregue: ");
                 String descricao=in2.nextLine();
+
+
                 
                 System.out.println("");
                 System.out.println("Informe o apartamento de destino: ");
@@ -78,6 +87,7 @@ public class Terminal {
                 System.out.println("Minuto: ");
                 int minuto=in.nextInt();
 
+
                 System.out.println("Operador digite o seu nome:");
                 String nOp = in.next();
 
@@ -89,6 +99,7 @@ public class Terminal {
                 Entrega nova_entrega = new Entrega(nro, descricao, dia, mes, ano, hora, minuto, apDestino, operador);
                 
                 entrega.registrarNovaEntrega(nova_entrega);
+
                 break;
 
 
@@ -101,7 +112,9 @@ public class Terminal {
                     case 1:
                     //PROCURAR ENTREGA PELA DESCRIÇÃO
                     System.out.println("Por favor, informe a descrição da entrega: ");
+
                     String procurar_descricao= in3.nextLine();
+
 
                     entrega.buscarEntregaDescricao(procurar_descricao);
 
@@ -151,6 +164,7 @@ public class Terminal {
                 num = in.nextInt();
                 entrega.retirarEntregaNro(num);
                 break;
+
 
                 case 0:
                 System.out.println("Finalizando programa...");
