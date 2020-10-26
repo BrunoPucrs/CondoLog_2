@@ -163,6 +163,7 @@ public class Terminal {
                 System.out.println("\nDigite o numero da entrega: ");
                 num = in.nextInt();
                 entrega.retirarEntregaNro(num);
+                System.out.println("\nEntrega retirada com sucesso!\n");
                 break;
 
 

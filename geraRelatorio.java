@@ -1,5 +1,7 @@
 package CondoLog_2;
 import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.format.*;
 
 public class geraRelatorio {
     private CadastroDeMoradores cdm;
@@ -11,6 +13,9 @@ public class geraRelatorio {
     }
 
     public void relatorio() {
+        LocalDateTime myDateObj = LocalDateTime.now();
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        String dataFormatada = myDateObj.format(myFormatObj);
         Scanner in = new Scanner(System.in);
         System.out.println("--------------------------------------------------------------------------------------------------------------");
         System.out.printf("%5s %15s %30s %5s %10s %10s %15s", "ENTREGA", "DATA/HORA", "DESCRICAO", "APTO", "OPERADOR","RETIRADA","MORADOR");
@@ -21,7 +26,7 @@ public class geraRelatorio {
         String dscr = "";
         String apto = "";
         String oprdr = "";
-        boolean rtr = false;
+        String rtr = "";
         String mrdr = "";
         for(Entrega entrega: ope.getEntregas()){
             ent = entrega.getNro()+"";
@@ -29,7 +34,11 @@ public class geraRelatorio {
             dscr = entrega.getDescricao();
             apto = entrega.getApDestino()+"";
             oprdr = entrega.getOperador();
-            rtr = entrega.getRetirado();
+            if(entrega.getRetirado() == false) {
+                rtr = "Não Retirado";
+            } else {
+                rtr = dataFormatada;
+            }
             int cont = 0;
             for (Morador morador : cdm.getMoradores()) {
                 if(entrega.getApDestino() == morador.getNumeroApartamento()) {
