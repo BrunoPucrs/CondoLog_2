@@ -6,7 +6,7 @@ public class OperacaoDeEntregas {
 
     public void registrarEntregas() {
         //formato: descrição, dia, mes, ano, hora, minuto, apartamento, operador
-        entregas.add(new Entrega(1,"Caixa grande branca", 12, 10, 2020, 18, 33, 405, "BG"));
+        entregas.add(new Entrega(1,"Caixa grande branca", 12, 10, 2020, 18, 33, 701, "BG"));
         entregas.add(new Entrega(2,"Caixa pequena azul", 13, 10, 2020, 19, 41, 406, "GP"));
         entregas.add(new Entrega(3,"Envelope pardo", 13, 10, 2020, 19, 56, 302, "BR"));
         entregas.add(new Entrega(4,"Carta internacional", 19, 11, 2020, 13, 44, 306, "BG"));
@@ -55,6 +55,19 @@ public class OperacaoDeEntregas {
                 entregasEncontradas++;
             }
             if(entregasEncontradas == 0) System.out.println("Não foram encontradas entregas entre as datas especificadas!");
+        }
+    }
+
+    public void retirarEntregaNro(int num) {
+        boolean flag = false;
+        for(Entrega entrega : entregas) {
+            if(entrega.getNro() == num) {
+                flag = true;
+                entrega.setRetirado(true);
+            }
+        }
+        if(flag == false) {
+            System.out.println("Não foram encontradas entregas com essa descrição!");
         }
     }
 

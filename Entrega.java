@@ -10,6 +10,7 @@ public class Entrega {
     private int hora;
     private int minuto;
     private int apDestino;
+    private boolean retirado;
 
     Entrega(int nro, String descricao, int dia, int mes, int ano, int hora, int minuto, int apDestino, String operador) {
         this.nro = nro;
@@ -21,7 +22,17 @@ public class Entrega {
         this.minuto = minuto;
         this.apDestino = apDestino;
         this.operador = operador;
+        this.retirado = false;
     }
+
+    public void setRetirado(boolean retirado){
+        this.retirado = retirado;
+    }
+
+    public boolean getRetirado() {
+        return retirado;
+    }
+
 
     public String getOperador() {
         return operador;
