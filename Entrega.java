@@ -1,4 +1,4 @@
-package CondoLog_2;;
+package CondoLog_2;
 
 public class Entrega {
     private String operador;
