@@ -16,9 +16,11 @@ onde buscamos praticar metodologias ageis e técnicas de versionamento demonstra
 
 <h4>Estrutura</h4>
 
- O repositório conta com 3Branchs de desenvolvimento, são elas:
+ O repositório conta com 4Branchs de desenvolvimento, são elas:
 <ul>
-  <li><b>1#-Fundamentals -</b>  Responsável pela estrutura básica e funções do código;</li>
-  <li><b>2#-Functions -</b> Toda parte de funcionalidades do sistema;</li> 
-  <li><b>3#-Checkout -</b> Parte de apresentação/saída ao operador</li>
+  <li><b>1#-fundamentals -</b>  Responsável pela estrutura básica e funções do código;</li>
+  <li><b>2#-functions -</b> Toda parte de funcionalidades do sistema;</li> 
+  <li><b>3#-checkout -</b> Parte de apresentação/saída ao operador</li>
+  <li><b>4#-hotfix - </b> Utilizado para correçao de bugs</li>
 </ul>
+
